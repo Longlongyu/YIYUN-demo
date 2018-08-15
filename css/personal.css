@@ -1,0 +1,1050 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+body{
+    background-color: #07050B;
+}
+header{
+    height: 13em;
+}
+article{
+    position: relative;
+    top: 0;
+    padding-bottom: 3em;
+}
+footer{
+    height: 10.5em;
+    background-color: #333;
+}
+a{
+    text-decoration: none;
+    outline:none;
+}
+a:hover{
+    cursor: pointer;
+}
+.Stick{
+    height: 2em;
+    width: 2em;
+    position: fixed;
+    right: 3em;
+    bottom: 4em;
+    background-color: #000000;
+    z-index: 2;
+    padding: 1em;
+    border-radius: 10px;
+    opacity: 0.5;
+    display: none;
+    transition: all 0.5s;
+}
+.Stick:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    transform-origin: center;
+    transform: scale(1.1);
+    
+}
+.Stick>svg{
+    width: 2em;
+    fill: white;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+#oheader{
+    height: 25em;
+    z-index: -1;
+}
+#navigation{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    z-index: 2;
+}
+#navigation>img{
+    width: 8em;
+    height: auto;
+}
+#navigation>span{
+    padding: 0.5em;
+    margin-left: 1em;
+}
+#navigation>.hr{
+    margin-left: 1em;
+}
+#navigation>.more{
+    margin-left: 1.3em;
+}
+#signin{
+    padding: 0.3em 1.5em;
+    border-radius: 0.2em;
+    margin-left: 1em;
+}
+#signin:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.SignPanel{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0 ,0 ,0 , 0.3);
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.SignPanel>.Panel{
+    height: 19em;
+    width: 32em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform-origin: center;
+    transform:rotateY(90deg);
+}
+.SignPanel>.Panel>img{
+    width: 9em;
+}
+.SignPanel>.Panel>*:not(.close){
+    margin: 0.3em 5em;
+    position: relative;
+    top: -0.8em;
+}
+.signText{
+    width: 26em;
+    height: 2.5em;
+    border: 1px solid #808080;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #808080;
+}
+.signText>*{
+    margin: 0 0.2em;
+}
+.signText>.hr{
+    width: 1px;
+    height: 1.3em;
+    background-color: #808080;
+}
+.signText>.text{
+    width: 22em;
+    height: 2em;
+    background-color: transparent;
+    outline:none;
+    border: none;
+    color: black;
+    font-size: 0.8em;
+}
+.SignPanel>.Panel>.checkbox{
+    width: 26em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    color: #808080;
+}
+.SignPanel>.Panel>.checkbox>a{
+    color: orange;
+}
+.SignPanel>.Panel a:hover{
+    text-decoration: underline;
+}
+.LoginPanel>.Panel a:hover{
+    text-decoration: underline;
+}
+.SignPanel>.Panel>.signbtn{
+    width: 26em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #888888;
+    background-color: #BEBDBD;
+    color: #888888;
+    border-radius: 5px;
+}
+.SignPanel>.Panel>.signbtn:hover{
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    cursor:pointer;
+}
+.SignPanel>.Panel>.signhr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SignPanel>.Panel>.signhr>hr{
+    border: none;
+    width: 6.5em;
+    margin: 0 0.5em;
+    height: 1px;
+    background-color: #A9A9A9;
+    
+}
+.SignPanel>.Panel>.signhr>a{
+    color: #A9A9A9;
+    font-size: 0.8em;
+}
+.rotateY{
+    transform:rotateY(0deg) !important;
+    transition: all 0.5s;
+}
+.close>svg{
+    height: 1em;
+    fill: gray;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.close:hover>svg{
+    fill: black;
+    transform-origin: center;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.gotoLogin{
+    height: 1em;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    font-size: 0.8em;
+    color: #888888;
+}
+.gotoLogin>a{
+    color: orange;
+}
+#login{
+    padding: 0.3em 1.5em;
+    border-radius: 0.2em;
+    margin-left: 1em;
+}
+#login:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.LoginPanel{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0 ,0 ,0 , 0.3);
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.LoginPanel>.Panel{
+    height: 19em;
+    width: 32em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform-origin: center;
+    transform:rotateY(90deg);
+}
+.LoginPanel>.Panel>img{
+    width: 9em;
+}
+.LoginPanel>.Panel>*:not(.close){
+    margin: 0.3em 5em;
+    position: relative;
+    top: -0.8em;
+}
+.loginText{
+    width: 24em;
+    height: 2em;
+    border: 1px solid #808080;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #808080;
+}
+.loginText>.text{
+    width: 23em;
+    height: 2em;
+    background-color: transparent;
+    outline:none;
+    border: none;
+    color: black;
+    font-size: 0.8em;
+}
+.loginbtn{
+    width: 24em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #888888;
+    background-color: #BEBDBD;
+    color: #888888;
+    border-radius: 5px;
+}
+.loginbtn:hover{
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    cursor:pointer;
+}
+.LoginPanel>.Panel>.checkbox{
+    width: 25em;
+    height: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: #808080;
+}
+.LoginPanel>.Panel>.checkbox>div{
+    display: flex;
+    align-items: center;
+}
+.LoginPanel>.Panel>.checkbox>a{
+    color: orange;
+}
+.loginhr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginhr>hr{
+    border: none;
+    width: 7em;
+    margin: 0 0.5em;
+    height: 1px;
+    background-color: #A9A9A9;
+    
+}
+.loginhr>a{
+    color: #A9A9A9;
+    font-size: 0.8em;
+}
+.gotoSign{
+    height: 1em;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    font-size: 0.8em;
+    color: #888888;
+}
+.gotoSign>a{
+    color: orange;
+}
+.more{
+    align-self: flex-start;
+    position: relative;
+    top: 1.4em;
+    list-style: none;
+}
+.more:hover{
+    height: 10em;
+}
+.more:hover>#down{
+    display: block;
+}
+#down{
+    display: none;
+}
+.more>li:not(.more-down){
+    width: 5px;
+    height: 5px;
+    float: left;
+    margin-left: 2px;
+    border-radius: 0.15em;
+}
+.more-down{
+    position: absolute;
+    top: 1.5em;
+    left: -8.5em;
+    display: flex;
+    width: 15em;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.more-down>.triangle{
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 1em solid white;
+    margin-left: 3em;
+    z-index: 2;
+}
+.more-down>.radiu-square{
+    width: 15em;
+    height: 10em;
+    background-color: white;
+    scrollbar-shadow-color: ;
+    border-radius: 3px;
+    box-shadow: 2px 1px 2px rgba(0,0,0,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.more-down>.radiu-square>span{
+    font-weight: bold;
+}
+.more-down>.radiu-square>a{
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    font-size: 0.8em;
+}
+.more-down>.radiu-square>p{
+    position: relative;
+    left: 4.5em;
+    font-size: 0.75em;
+    color: darkgrey;
+}
+.more-down>.radiu-square>p>a{
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+.more-down>.radiu-square>hr{
+    width: 13em;
+    height: 1px;
+    background-color: darkgrey;
+    border: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.radiu-square>*{
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+.more-down>.radiu-square a:hover{
+    color: #ff6600;
+    cursor:pointer;
+}
+
+.one{
+    background: white;
+    box-shadow: 3px 0 2px #888888;
+}
+.one>.logo1{
+    display: none;
+}
+.one>span{
+    color: black;
+}
+.one>span:hover{
+    font-weight:blod;
+    border-bottom: 0.1em solid black;
+}
+.one>span>a{
+    color: black;
+}
+.one>.hr{
+    width: 1px; 
+    height: 1.3em; 
+    background-color: #888888; 
+}
+.one>.more{
+    margin-right: 10em;
+}
+.one>.more>li:not(.more-down){
+    background-color: #888888;
+}
+.one>#signin{
+    color: white;
+    border: 1px solid rgba(240, 38, 44, 1);
+    background-color: rgba(240, 38, 44, 1);
+}
+.one>#signin:hover{
+    border: 1px solid #dc1015;
+    background-color: #dc1015;
+}
+.one>#login{
+    color: black;
+    border: 1px solid black;
+}
+.one>#login:hover{
+    background-color: #f2f2f2;
+}
+
+.two{
+    background: white;
+    box-shadow: 3px 0 2px #888888;
+}
+.two>.logo1{
+    display: none;
+}
+.two>span{
+    color: black;
+}
+.two>span:hover{
+    font-weight:blod;
+    border-bottom: 0.1em solid black;
+}
+.two>span>a{
+    color: black;
+}
+.two>.hr{
+    width: 1px; 
+    height: 1.3em; 
+    background-color: #888888; 
+}
+.two>.more{
+    margin-right: 10em;
+}
+.two>.more>li:not(.more-down){
+    background-color: #888888;
+}
+.two>#signin{
+    color: white;
+    border: 1px solid rgba(240, 38, 44, 1);
+    background-color: rgba(240, 38, 44, 1);
+}
+.two>#signin:hover{
+    border: 1px solid #dc1015;
+    background-color: #dc1015;
+}
+.two>#login{
+    color: black;
+    border: 1px solid black;
+}
+.two>#login:hover{
+    background-color: #f2f2f2;
+}
+
+#navseach{
+    position: relative;
+}
+#navseach:hover>.seachBtn{
+    background-color: rgba(10, 10, 10, 0.1);
+}
+.seachBtn>svg{
+    position: absolute;
+    top: 0.3em;
+    right: 0.5em;
+    width: 1em;
+    fill: black;
+    opacity: 0.5;
+}
+.seachBtn>svg:hover{
+    opacity: 1;
+    cursor:pointer;
+}
+.seachBtn{
+    height: 1.6em;
+    width: 25em;
+    border: 1px solid #797979;
+    border-radius: 2px;
+    position: relative;
+}
+.seachBtn>input{
+    height: 1.6em;
+    width: 23em;
+    background-color: transparent;
+    outline:none;
+    border: none;
+    caret-color: black;
+    color: black;
+    font-size: 0.8em;
+    position: absolute;
+    top: 0.2em;
+    left: 0.5em;
+    opacity: 0.6;
+}
+.seachBtn>input:focus{
+    opacity: 1;
+}
+#banner{
+    width: 100%;
+    height: 18em;
+    overflow: hidden;
+}
+#banner>img{
+    width: 100%;
+    position: absolute;
+    top: 3rem;
+}
+#avatarbox{
+    width: 100%;
+    height: 5em;
+}
+.oavatar{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0.5em;
+    background-color: #f4f4f4;
+    margin-left: 14em;
+}
+.oavatar>img{
+    border-radius: 50%;
+    width: 8em;
+}
+.oName{
+    position: relative;
+    top: 1.3em;
+    margin-left: 3em;
+    text-align: center;
+    height: 3em;
+}
+.oName>p:first-of-type{
+    font-size: 1.5em;
+    color: white;
+    font-weight: 700;
+}
+.oName>p:nth-of-type(2){
+    font-size: 1em;
+    color: #EEEEEE;
+}
+.oName:hover{
+    cursor: pointer;
+}
+.oName>p:nth-of-type(1):hover{
+    color: orange;
+}
+.otext{
+    position: relative;
+    top: 2em;
+    margin-left: 2em;
+    text-align: center;
+    height: 3em;
+    font-size: 1em;
+}
+.otext>p:first-of-type{
+    color: #EEEEEE;
+}
+.otext>p:nth-of-type(2){
+    color: white;
+    font-weight: 700;
+}
+.otext:hover{
+    cursor: pointer;
+}
+.otext>p:nth-of-type(2):hover{
+    color: orange;
+}
+.ohr{
+    position: relative;
+    top: 2.5em;
+    height: 2em;
+    width: 2px;
+    background-color: #EEEEEE;
+    margin-left: 2em;
+    font-size: 1em;
+}
+.avatarPanel{
+    position: relative;
+    top: 2.5em;
+    margin-left: 6em;
+}
+.avatarPanel>i{
+    font-size: 2em;
+    color: white;
+    transform-origin: center;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+.avatarPanel>div{
+    position: absolute;
+    right: -1em;
+    width: 3em;
+    height: 0;
+    background-color: white;
+    transition: height .5s;
+    overflow: hidden;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+.avatarPanel>div>p{
+    height: 1.2em;
+    text-align: center;
+    padding-bottom: 0.1em;
+}
+.avatarPanel>div>p:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.avatarPanel:hover>i{
+    transform: rotate(0deg);
+}
+.avatarPanel:hover>div{
+    padding: 0.5em 0;
+    height: 5.2em;
+}
+#workbtn{
+    width: 30em;
+    height: 2.5em;
+    margin: 0 auto;
+    margin-top: 2.5em;
+}
+#workbtn>div{
+    width: 5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    margin-left: 1em;
+}
+#workbtn>div{
+    opacity: 0.7;
+    color: #797979;
+}
+#workbtn>div:hover,.oselect{
+    opacity: 1 !important;
+    color: black !important;
+    cursor: pointer;
+}
+#worksbox{
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+    width: 85%;
+    padding: 2em;
+    margin-bottom: 3em;
+    overflow: hidden;
+    letter-spacing: -5px;
+    white-space: nowrap;
+}
+.wbox{
+    display: inline-block;
+    width: 100%;
+    padding-right: 3em;
+    letter-spacing: normal;
+    position: relative;
+}
+.wbox>p{
+    text-indent: 2em;
+    margin-bottom: 1em;
+}
+.wbox>p>i{
+    opacity: 0.5;
+}
+.wbox>p>i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.IndividualPanel{
+    background-color: white;
+    height: 20.7em;
+    width: 16.25em;
+    border-radius: 4em 6px 4em 4em;
+    margin-bottom: 1em;
+    transition: all 0.5s;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin-left: 1.5em;
+}
+.IndividualPanel:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0,125,125,0.7);
+}
+.IndividualPanel>img{
+    width: 16.25em;
+    border-radius: 4em 6px 0 0;
+    cursor: pointer;
+}
+.IndividualPanel>img:hover{
+    opacity: 0.9;
+}
+.TitleClassify{
+    margin-top: 0.7em;
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+.title{
+    font-size: 1.125em;
+    font-weight: bold;
+}
+.classify{
+    font-size: 0.875em;
+    color: #797979;
+}
+.ohover:hover{
+    color: #FF6600;
+    cursor: pointer;
+}
+.Individual{
+    display: flex;
+    align-items: center;
+    height: 3em;
+    width: 13em;
+    margin: 0.2em auto;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+}
+.Individual>.avatar{
+    position: relative;
+    top: 0;
+}
+.Individual>.avatar>img{
+    height: 2.3em;
+    border-radius: 50%;
+}
+.ShowPanel{
+    position: absolute;
+    left: -1.6em;
+    top: -18.75em;
+    z-index: 2;
+    opacity: 0;
+    display: none;
+    transition: all 0.5s;
+}
+.ShowPanel>.triangle{
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 1em solid white;
+    margin-left: 2.3em;
+}
+.ShowPanel>.radiu-square{
+    width: 16.25em;
+    height: 17.75em;
+    background-color: white;
+    scrollbar-shadow-color: ;
+    border-radius: 1.5em;
+    box-shadow: 0 0 20px rgba(0,125,125,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ShowPanel>.radiu-square>img{
+    height: 4.5em;
+    border-radius: 50%;
+    margin-top: 1.5em;
+}
+.ShowBtn{
+    opacity: 0.8;
+    color: white;
+    height: 2em;
+    width: 6em;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0.5em;
+    font-size: 1em;
+}
+.ShowBtn:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.guanzhu{
+    background-color: #ffcc00;
+}
+.sixin{
+    background-color: #169BD5;
+}
+.grayFont{
+    font-size: 0.875em;
+    color: #797979;
+}
+.Individual>.name{
+    font-size: 0.875em;
+    margin-left: 0.5em;
+}
+.Individual>.time{
+    position: absolute;
+    right: 0;
+    top: 1em;
+}
+#Visitbox{
+    height: 28em;
+    width: 20em;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 4.2em;
+    padding-top: 1.5em;
+}
+#Visitbox>p{
+    text-indent: 1.5em;
+    margin-bottom: 1em;
+}
+#Visitbox>hr{
+    opacity: 0.2;
+    margin-bottom: 1em;
+}
+.Visiter{
+    margin: 0.5em 1.5em;
+    margin-right: 0.5em;
+}
+.Visiter:hover{
+    cursor: pointer;
+}
+.Visiter>img{
+    height: 4em;
+    border-radius: 50%;
+}
+.Visiter>p{
+    width: 4em;
+    text-align: center;
+}
+.Visitertime{
+    width: 5.33em !important;
+    font-size: 0.75em;
+    color: #808080;
+}
+#Commentbox{
+    width: 49em;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 2em;
+    padding: 2em;
+    position: relative;
+}
+.comment{
+    padding: 1em;
+    border-radius: 5px;
+    width: 53em;
+    height: 5em;
+    border: 1px solid #BEBDBD;
+    resize: none;
+    background-color: #F2F2F2;
+}
+.comment:focus{
+    background-color: transparent;
+}
+.commentbtn{
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    color: #999999;
+    margin-top: 1em;
+}
+#Commentbox>p{
+    margin-top: 1em;
+    text-align: center;
+}
+.ocomment{
+    margin-top: 2em;
+    width: 49em;
+    position: relative;
+    margin-bottom: 1em;
+}
+.ocomment>img{
+    width: 5em;
+    border-radius: 50%;
+}
+.ocp{
+    margin-left: 2em;
+}
+.ocp>p:first-of-type{
+    font-weight: bold;
+}
+.ocp>p:nth-of-type(2){
+    margin-left: 3em;
+    color: #A9A9A9;
+}
+.ocp>.clear{
+    margin-bottom: 1em;
+}
+.Reply{
+    position: absolute;
+    right: 1em;
+    bottom: 0.5em;
+    opacity: 0.4;
+}
+.Reply:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.Reply>i{
+    margin-left: 0.6em;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.textend{
+    text-align: end;
+}
+.textbtn:hover{
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.clear{
+    clear: both;
+}
+.footerA{
+    margin-left: 7.5em;
+    margin-bottom: 3em;
+}
+.footerA>a{
+    font-size: 0.875em;
+    float: left;
+    margin-right: 3em;
+    margin-top: 3em;
+    color: #999;
+    margin-top: 3.4em;
+}
+.clearLeftFloat{
+    clear: left;
+}
+footer a:hover{
+    cursor: pointer;
+    color: #ccc;
+}
+.footerhr{
+    height: 1px;
+    width: 74em;
+    background-color: #999;
+    margin: 0 auto;
+    opacity: 0.3;
+}
+.footerB{
+    text-align: center;
+    color: #999;
+    margin-top: 1.2em;
+    font-size: 0.875em;
+}
+.footerB>a{
+    margin-right: 1em;
+}
+.footerB>a:hover{
+    text-decoration: underline;
+}
+#myGame{
+    position: absolute;
+    top: -1rem;
+    left: 10%;
+    width: 68rem;
+    height: 500px;
+    overflow: hidden;
+}
+.star{
+    color: white;
+    position: absolute;
+    opacity: 0.8;
+    padding: 1em;
+    transform-origin: center;
+}

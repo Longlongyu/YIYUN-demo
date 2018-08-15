@@ -1,0 +1,947 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+body{
+    height: 100em;
+    background-color: #333333;
+}
+header{
+	height: 48em;
+}
+article{
+	position: relative;
+	top: 0;
+}
+footer{
+    height: 10.5em;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    outline:none;
+}
+.Stick{
+    height: 2em;
+    width: 2em;
+    position: fixed;
+    right: 3em;
+    bottom: 4em;
+    background-color: white;
+    z-index: 2;
+    padding: 1em;
+    border-radius: 10px;
+    opacity: 0.5;
+    display: none;
+    transition: all 0.5s;
+}
+.Stick:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    transform-origin: center;
+    transform: scale(1.1);
+    
+}
+.Stick>svg{
+    width: 2em;
+    fill: black;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+#oheader{
+    height: 30em;
+    z-index: -1;
+}
+
+#navigation{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    z-index: 2;
+}
+#navigation>img{
+    width: 8em;
+    height: auto;
+}
+#navigation>span{
+    padding: 0.5em;
+    margin-left: 1em;
+}
+#navigation>.hr{
+    margin-left: 1em;
+}
+#navigation>.more{
+    margin-left: 1.3em;
+    margin-right: 35em;
+}
+#signin{
+    padding: 0.3em 1.5em;
+    border-radius: 0.2em;
+    margin-left: 1em;
+}
+#signin:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.SignPanel{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0 ,0 ,0 , 0.3);
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.SignPanel>.Panel{
+    height: 19em;
+    width: 32em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform-origin: center;
+    transform:rotateY(90deg);
+}
+.SignPanel>.Panel>img{
+    width: 9em;
+}
+.SignPanel>.Panel>*:not(.close){
+	margin: 0.3em 5em;
+	position: relative;
+    top: -0.8em;
+}
+.signText{
+    width: 26em;
+    height: 2.5em;
+    border: 1px solid #808080;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #808080;
+}
+.signText>*{
+    margin: 0 0.2em;
+}
+.signText>.hr{
+    width: 1px;
+    height: 1.3em;
+    background-color: #808080;
+}
+.signText>.text{
+    width: 22em;
+    height: 2em;
+    background-color: transparent;
+    outline:none;
+    border: none;
+    color: black;
+    font-size: 0.8em;
+}
+.SignPanel>.Panel>.checkbox{
+	width: 26em;
+	height: 1em;
+	display: flex;
+	align-items: center;
+	font-size: 0.8em;
+    color: #808080;
+}
+.SignPanel>.Panel>.checkbox>a{
+    color: orange;
+}
+.SignPanel>.Panel a:hover{
+    text-decoration: underline;
+}
+.LoginPanel>.Panel a:hover{
+    text-decoration: underline;
+}
+.SignPanel>.Panel>.signbtn{
+	width: 26em;
+	height: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #888888;
+    background-color: #BEBDBD;
+    color: #888888;
+    border-radius: 5px;
+}
+.SignPanel>.Panel>.signbtn:hover{
+	border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    cursor:pointer;
+}
+.SignPanel>.Panel>.signhr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.SignPanel>.Panel>.signhr>hr{
+	border: none;
+	width: 6.5em;
+	margin: 0 0.5em;
+	height: 1px;
+	background-color: #A9A9A9;
+	
+}
+.SignPanel>.Panel>.signhr>a{
+	color: #A9A9A9;
+	font-size: 0.8em;
+}
+.rotateY{
+    transform:rotateY(0deg) !important;
+    transition: all 0.5s;
+}
+.close>svg{
+    height: 1em;
+    fill: gray;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.close:hover>svg{
+    fill: black;
+    transform-origin: center;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.gotoLogin{
+	height: 1em;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    font-size: 0.8em;
+    color: #888888;
+}
+.gotoLogin>a{
+    color: orange;
+}
+#login{
+    padding: 0.3em 1.5em;
+    border-radius: 0.2em;
+    margin-left: 1em;
+}
+#login:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.LoginPanel{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0 ,0 ,0 , 0.3);
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.LoginPanel>.Panel{
+    height: 19em;
+    width: 32em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform-origin: center;
+    transform:rotateY(90deg);
+}
+.LoginPanel>.Panel>img{
+    width: 9em;
+}
+.LoginPanel>.Panel>*:not(.close){
+	margin: 0.3em 5em;
+	position: relative;
+    top: -0.8em;
+}
+.loginText{
+    width: 24em;
+    height: 2em;
+    border: 1px solid #808080;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #808080;
+}
+.loginText>.text{
+    width: 23em;
+    height: 2em;
+    background-color: transparent;
+    outline:none;
+    border: none;
+    color: black;
+    font-size: 0.8em;
+}
+.loginbtn{
+	width: 24em;
+	height: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #888888;
+    background-color: #BEBDBD;
+    color: #888888;
+    border-radius: 5px;
+}
+.loginbtn:hover{
+	border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    cursor:pointer;
+}
+.LoginPanel>.Panel>.checkbox{
+	width: 25em;
+	height: 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.8em;
+    color: #808080;
+}
+.LoginPanel>.Panel>.checkbox>div{
+	display: flex;
+	align-items: center;
+}
+.LoginPanel>.Panel>.checkbox>a{
+    color: orange;
+}
+.loginhr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loginhr>hr{
+	border: none;
+	width: 7em;
+	margin: 0 0.5em;
+	height: 1px;
+	background-color: #A9A9A9;
+	
+}
+.loginhr>a{
+	color: #A9A9A9;
+	font-size: 0.8em;
+}
+.gotoSign{
+	height: 1em;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    font-size: 0.8em;
+    color: #888888;
+}
+.gotoSign>a{
+    color: orange;
+}
+.more{
+    align-self: flex-start;
+    position: relative;
+    top: 1.4em;
+    list-style: none;
+}
+.more:hover{
+    height: 10em;
+}
+.more:hover>#down{
+    display: block;
+}
+#down{
+    display: none;
+}
+.more>li:not(.more-down){
+    width: 5px;
+    height: 5px;
+    float: left;
+    margin-left: 2px;
+    border-radius: 0.15em;
+}
+.more-down{
+    position: absolute;
+    top: 1.5em;
+    left: -8.5em;
+    display: flex;
+    width: 15em;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.more-down>.triangle{
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 1em solid white;
+    margin-left: 3em;
+    z-index: 2;
+}
+.more-down>.radiu-square{
+    width: 15em;
+    height: 10em;
+    background-color: white;
+    scrollbar-shadow-color: ;
+    border-radius: 3px;
+    box-shadow: 2px 1px 2px rgba(0,0,0,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.more-down>.radiu-square>span{
+    font-weight: bold;
+}
+.more-down>.radiu-square>a{
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    font-size: 0.8em;
+}
+.more-down>.radiu-square>p{
+    position: relative;
+    left: 4.5em;
+    font-size: 0.75em;
+    color: darkgrey;
+}
+.more-down>.radiu-square>p>a{
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+.more-down>.radiu-square>hr{
+    width: 13em;
+    height: 1px;
+    background-color: darkgrey;
+    border: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.radiu-square>*{
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+.more-down>.radiu-square a:hover{
+    color: #ff6600;
+    cursor:pointer;
+}
+
+.one{}
+.one>.logo2{
+    display: none;
+}
+.one>span{
+    color: white;
+}
+.one>span:hover{
+    font-weight:blod;
+    border-bottom: 0.1em solid white;
+}
+.one>span>a{
+    color: white;
+}
+.one>.hr{
+    width: 1px; 
+    height: 1.3em; 
+    background-color: white; 
+}
+.one>.more>li:not(.more-down){
+    background-color: white;
+}
+.one>#signin{
+    color: white;
+    border: 1px solid rgba(240, 38, 44, 0.5);
+    background-color: rgba(240, 38, 44, 0.5);
+}
+.one>#signin:hover{
+    border: 1px solid rgba(240, 38, 44, 1);
+    background-color: rgba(240, 38, 44, 1);
+}
+.one>#login{
+    color: white;
+    border: 1px solid white;
+}
+.one>#login:hover{
+    background-color: white;
+    color: black;
+}
+
+.two{
+    background-color: rgba(0,0,0,0.8);
+}
+.two>.logo2{
+    display: none;
+}
+.two>span{
+    color: white;
+}
+.two>span:hover{
+    font-weight:blod;
+    border-bottom: 0.1em solid white;
+}
+.two>span>a{
+    color: white;
+}
+.two>.hr{
+    width: 1px; 
+    height: 1.3em; 
+    background-color: white; 
+}
+.two>.more>li:not(.more-down){
+    background-color: white;
+}
+.two>#signin{
+    color: white;
+    border: 1px solid rgba(240, 38, 44, 1);
+    background-color: rgba(240, 38, 44, 1);
+}
+.two>#signin:hover{
+    border: 1px solid #dc1015;
+    background-color: #dc1015;
+}
+.two>#login{
+    color: white;
+    border: 1px solid white;
+}
+.two>#login:hover{
+    background-color: #f2f2f2;
+    color: black;
+}
+
+#banner{
+    width: 100%;
+    height: 48em;
+    overflow: hidden;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#banner:not(#orientation){
+    white-space: nowrap;
+}
+/*:not(#orientation)*/
+#banner>img{
+    width: 110%;
+    flex-shrink: 0;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    transition: all 1s;
+}
+#banner>img:not(:first-of-type){
+    opacity: 0;
+}
+#orientation{
+    width: 100%;
+    height: 48em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+#orientation>div{
+}
+#mycanvas{
+    width: 100%;
+    height: 48em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#m-tab{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+.tab{
+    margin-right: 3em;
+}
+.tab>div{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 3em;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    margin-bottom: 1em;
+    border: 2px solid white;
+    z-index: 1;
+    transition: all 0.4s;
+}
+.tab>div:hover{
+    cursor:pointer;
+    box-shadow: 0 0 15px rgba(255,255,255,1);
+}
+.tab>div>div{
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+.tab>div>img{
+    position: absolute;
+    top: 0;
+    left: -2.5em;
+    width: 8em;
+}
+
+.Selected{
+    opacity: 1 !important;
+    transform-origin: center;
+    transform: scale(1.2);
+}
+.Selected>div{
+    width: 0em !important;
+    transition: width 8s;
+}
+
+#seach{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-box{
+    position: relative;
+    top: -2em;
+    opacity: 0.6;
+    z-index: 1;
+    transition: all 0.4s;
+}
+#search-box:hover{
+    opacity: 1;
+    transform-origin: center;
+    transform: scale(1.05);
+}
+#search-box:hover>.outBtn{
+    background-color: rgba(10, 10, 10, 0.4);
+}
+.outBtn>svg{
+    width: 3em;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 30;
+    transition: all 0.7s;
+    transform-origin: center;
+    animation: orotate 1s infinite;
+    -webkit-animation: orotate 1s ease;
+}
+.outBtn>svg:hover{
+    fill: white;
+    cursor:pointer;
+    animation: rotate 1s infinite;
+    -webkit-animation: rotate 1s ease;
+}
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+@keyframes orotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(-360deg);
+	}
+}
+@-webkit-keyframes orotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(-360deg);
+	}
+}
+.outBtn{
+    width: 35em;
+    height: 4em;
+    border: 1px solid white;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    box-shadow:0 1px 3px #bebdbd;
+    -webkit-box-shadow: 0 1px 3px #bebdbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outBtn>input{
+    width: 26em;
+    height: 3em;
+    background-color: transparent;
+    outline:none;
+    border: none;
+    caret-color: white;
+    color: white;
+    font-size: 1.2em;
+}
+.labels{
+    width: 35em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.labels>span:first-of-type{
+    color: #888888;
+}
+.labels>span{
+    margin: 0 1em;
+}
+.labels>span>a{
+    color: white;
+}
+.labels>span>a:hover{
+    text-decoration: underline;
+}
+
+.center-margin1em{
+	text-align: center;
+	margin: 1em;
+	font-size: 1.1em;
+	color: #888888;
+}
+#IndividualPanelBox{
+    width: 80em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.IndividualPanel{
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.7);
+    height: 20.7em;
+    width: 16.25em;
+    border-radius: 4em 6px 4em 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transition: all 0.5s;
+}
+.IndividualPanel:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0,125,255,0.8);
+}
+.IndividualPanel>img{
+    width: 16.25em;
+    border-radius: 4em 6px 0 0;
+    cursor: pointer;
+}
+.IndividualPanel>img:hover{
+    opacity: 0.9;
+}
+.TitleClassify{
+    margin-top: 0.7em;
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+.title{
+	color: white;
+    font-size: 1.125em;
+    font-weight: bold;
+}
+.classify{
+    font-size: 0.875em;
+    color: #CCC;
+}
+.ohover:hover{
+    color: #FF6600;
+    cursor: pointer;
+}
+.Individual{
+    display: flex;
+    align-items: center;
+    height: 3em;
+    width: 13em;
+    margin: 0.2em auto;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+}
+.Individual>.avatar{
+    position: relative;
+    top: 0;
+}
+.Individual>.avatar>img{
+	border: 1px solid white;
+    height: 2.3em;
+    border-radius: 50%;
+}
+.ShowPanel{
+    position: absolute;
+    left: -1.6em;
+    top: -18.75em;
+    z-index: 2;
+    opacity: 0;
+    display: none;
+    transition: all 0.5s;
+}
+.ShowPanel>.triangle{
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 1em solid rgba(0,0,0,0.8);
+    margin-left: 2.3em;
+}
+.ShowPanel>.radiu-square{
+    width: 16.25em;
+    height: 17.75em;
+    background-color: rgba(0,0,0,0.8);
+    scrollbar-shadow-color: ;
+    border-radius: 1.5em;
+    box-shadow: 0 0 20px rgba(0,125,255,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ShowPanel>.radiu-square>img{
+    height: 4.5em;
+    border-radius: 50%;
+    margin-top: 1.5em;
+    border: 1px solid white;
+}
+.ShowBtn{
+    opacity: 0.8;
+    color: white;
+    height: 2em;
+    width: 6em;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0.5em;
+    font-size: 1em;
+}
+.ShowBtn:hover{
+    opacity: 1;
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+.guanzhu{
+    border: 1px solid white;
+}
+.sixin{
+    border: 1px solid white;
+}
+.grayFont{
+    font-size: 0.875em;
+    color: #CCCCCC;
+}
+.Individual>.name{
+    font-size: 0.875em;
+    margin-left: 0.5em;
+    color: white;
+}
+.Individual>.time{
+    position: absolute;
+    right: 0;
+    top: 1em;
+}
+.loadMoreBtn{
+    margin: 2em auto;
+    height: 1em;
+    width: 25em;
+    text-align: center;
+    background-color: #333333;
+    border: 1px solid white;
+    color: #BEBDBD;
+    font-size: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.75em;
+    border-radius: 5px;
+    margin-bottom: 3em;
+}
+.loadMoreBtn:hover{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.footerA{
+    margin-left: 7.5em;
+    margin-bottom: 3em;
+}
+.footerA>a{
+    font-size: 0.875em;
+    float: left;
+    margin-right: 3em;
+    margin-top: 3em;
+    color: #999;
+    margin-top: 3.4em;
+}
+.clearLeftFloat{
+    clear: left;
+}
+footer a:hover{
+    cursor: pointer;
+    color: #ccc;
+}
+.footerhr{
+    height: 1px;
+    width: 74em;
+    background-color: #999;
+    margin: 0 auto;
+    opacity: 0.3;
+}
+.footerB{
+    text-align: center;
+    color: #999;
+    margin-top: 1.2em;
+    font-size: 0.875em;
+}
+.footerB>a{
+    margin-right: 1em;
+}
+.footerB>a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>艺云网-发现</title>
+        <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="css/discover.css" />
+        <link rel="stylesheet" type="text/css" href="css/core.css" />
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+        <script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/core.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/discover.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+
+    <body>
+        <div class="Stick">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+                <g>
+                    <path d="M543.3,787l390.4-394.9c22.5-22.7,32.2-49.8,9.7-72.6c-22.5-22.8-49.3-12.9-71.8,9.8L543.5,661.1V63.7c0-29.7-12.8-53.7-42.1-53.7c-29.3,0-45.8,24-45.8,53.7v597.4L128,329.8c-22.5-22.7-48.7-33.2-71.2-10.5c-22.5,22.8-13.4,50.5,9.1,73.3l390.5,395c0,0,23.4,26.9,41.2,26.9C518.6,814.4,543.3,787,543.3,787L543.3,787z M896.7,901.2H103.4c-36.6,0-57.6,11.3-57.6,43.5c0,32.1,18.3,45.3,57.6,45.3h793.3c36.4,0,57.6-12.2,57.6-44.4C954.3,913.4,932.5,901.2,896.7,901.2L896.7,901.2z" />
+                </g>
+            </svg>
+        </div>
+        <header>
+            <nav id="navigation" class="one">
+                <img class="logo1" src="img/yiyun_logo1.png" />
+                <img class="logo2" src="img/yiyun_logo2.png" />
+                <span><a href="index.html">首页</a></span>
+                <span><a>发现</a></span>
+                <span><a href="">最新</a></span>
+                <span><a href="activity.html">活动</a></span>
+                <div class="hr"></div>
+                <ul class="more">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <div id="down">
+                        <div class="more-down">
+                            <div class="triangle"></div>
+                            <div class="radiu-square">
+                                <span><a>插画/漫画</a></span>
+                                <span><a>平面</a></span>
+                                <span><a>UI/UX</a></span>
+                                <hr />
+                                <a>摄影</a>
+                                <a>人文艺术</a>
+                                <a>美食</a>
+                                <a>家居</a>
+                                <a>建筑设计</a>
+                                <a>旅行</a>
+                                <a>游戏</a>
+                                <a>运动</a>
+                                <a>手工艺</a>
+                                <hr />
+                                <p>
+                                    <a>关于</a>
+                                    <a>反馈</a>
+                                    <a>微博</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <div id="navseach">
+                    <div class="seachBtn">
+                        <input type="text" placeholder="搜索你喜欢的" />
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+                            <g>
+                                <path d="M990,919L724.5,652.1c51.1-67.3,81.4-151.2,81.4-242.2c0-220.5-178.5-400-397.9-400C188.5,10,10,189.4,10,410c0,220.6,178.5,400,398,400c93,0,178.7-32.3,246.6-86.2L919.4,990L990,919z M408,720C237.9,720,99.6,580.9,99.6,410S237.9,100,408,100c170,0,308.4,139,308.4,310C716.4,580.9,578,720,408,720z" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div id="signin">注册</div>
+                <div class="SignPanel">
+                    <div class="Panel">
+                        <div class="close">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                                <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+                                <g>
+                                    <path d="M133.3,993.1c-30.8,0-61.6-12.3-86.3-37c-49.3-49.3-49.3-129.4,0-178.7L774.3,50.1c49.3-49.3,129.4-49.3,178.7,0c49.3,49.3,49.3,129.4,0,178.7L219.6,956.1C194.9,980.8,164.1,993.1,133.3,993.1z" />
+                                    <path d="M860.6,986.9c-30.8,0-61.6-12.3-86.3-37L47,222.6C-2.3,173.3-2.3,93.2,47,43.9c49.3-49.3,129.4-49.3,178.7,0L953,771.2c49.3,49.3,49.3,129.4,0,178.7C928.4,974.6,897.5,986.9,860.6,986.9z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <img src="img/yiyun_logo2.png" />
+                        <p>注册会员</p>
+                        <div class="signText">
+                            <p>+86</p>
+                            <div class="hr"></div>
+                            <input class="text" type="text" placeholder="手机号" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" checked="checked" /> 我已阅读并接受
+                            <a>用户协议</a>
+                        </div>
+                        <div class="signbtn">注册</div>
+                        <div class="signhr">
+                            <hr />
+                            <a>其他方式注册</a>
+                            <hr />
+                        </div>
+                        <div class="close gotoLogin">
+                            已有帐号？
+                            <a>登录到艺云</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="login">登陆</div>
+                <div class="LoginPanel">
+                    <div class="Panel">
+                        <div class="close">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                                <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+                                <g>
+                                    <path d="M133.3,993.1c-30.8,0-61.6-12.3-86.3-37c-49.3-49.3-49.3-129.4,0-178.7L774.3,50.1c49.3-49.3,129.4-49.3,178.7,0c49.3,49.3,49.3,129.4,0,178.7L219.6,956.1C194.9,980.8,164.1,993.1,133.3,993.1z" />
+                                    <path d="M860.6,986.9c-30.8,0-61.6-12.3-86.3-37L47,222.6C-2.3,173.3-2.3,93.2,47,43.9c49.3-49.3,129.4-49.3,178.7,0L953,771.2c49.3,49.3,49.3,129.4,0,178.7C928.4,974.6,897.5,986.9,860.6,986.9z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <img src="img/yiyun_logo2.png" />
+                        <p>登录帐号</p>
+                        <div class="loginText">
+                            <input class="text" type="text" placeholder="请输入手机号或邮箱" />
+                        </div>
+                        <div class="loginText">
+                            <input class="text" type="password" placeholder="密码" />
+                        </div>
+                        <div class="checkbox">
+                            <div>
+                                <input type="checkbox" checked="checked" />
+                                <p> 保存密码</p>
+                            </div>
+                            <a>忘记密码？</a>
+                        </div>
+                        <div class="loginbtn">登录</div>
+                        <div class="loginhr">
+                            <hr />
+                            <a>其他方式登录</a>
+                            <hr />
+                        </div>
+                        <div class="close gotoSign">没有帐号？
+                            <a>点击注册</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="banner">
+                <div><span>I LIVE LIFE</span></div>
+                <div><span>DESIGN LOVE ME</span></div>
+                <p class="button"><span>GET STARED</span></p>
+                <img src="img/discover.jpg" />
+            </div>
+            <div id="oheader"></div>
+        </header>
+        <article>
+            <div class="Saying">为您推荐<i class="fa fa-refresh"></i></div>
+            <div id="IMGBox">
+                <div class="imgpanel">
+                    <img src="img/IMGBox/1.jpg" />
+                    <div class="imglabel">兔子</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/2.jpg" />
+                    <div class="imglabel">原画</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/3.jpg" />
+                    <div class="imglabel">森林精灵</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/4.jpg" />
+                    <div class="imglabel">舟</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/5.jpg" />
+                    <div class="imglabel">Children</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/6.jpg" />
+                    <div class="imglabel">优秀摄影</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/7.jpg" />
+                    <div class="imglabel">伞</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/8.jpg" />
+                    <div class="imglabel">门</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/9.jpg" />
+                    <div class="imglabel">喵</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/10.jpg" />
+                    <div class="imglabel">美食</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/11.jpg" />
+                    <div class="imglabel">世界杯</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/12.jpg" />
+                    <div class="imglabel">吧台</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/13.jpg" />
+                    <div class="imglabel">路</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/14.jpg" />
+                    <div class="imglabel">雪中摄影</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/15.jpg" />
+                    <div class="imglabel">花</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+                <div class="imgpanel">
+                    <img src="img/IMGBox/16.jpg" />
+                    <div class="imglabel">夜景</div>
+                    <span class="prompt">点击查看更多</span>
+                    <svg t="1528816750585" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4346" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                        <defs>
+                            <style type="text/css"></style>
+                        </defs>
+                        <path d="M511.998465 920.591839c510.790452-300.467259 458.235492-560.859801 458.235492-560.859801S962.7014 98.29163 742.328317 98.29163c-220.370013 0-230.329852 161.275103-230.329852 161.275103S501.950621 98.29163 281.638937 98.29163c-220.342384 0-227.870848 261.440407-227.870848 261.440407S1.177314 620.12458 511.998465 920.591839z" p-id="4347"></path>
+                    </svg>
+                </div>
+            </div>
+            <div id="discoverBox">
+                <span>艺</span>
+                <span>云</span>
+                <span>优</span>
+                <span>秀</span>
+                <span>设</span>
+                <span>计</span>
+                <span>师</span>
+                <div id="content">
+                    <div class="contentpanel">
+                        <img src="img/discoverbox/s-01.jpeg" />
+                        <div>
+                            <span>Allison House</span>
+                            <span>简介</span>
+                            <span>Allison在硅谷的设计社区里声名鹊起，是在她领导Codeacademy的团队并在稍后以早期设计的身份受雇于Dropbox时。今天她已经成为3D视觉领域的先锋，并致力于通过为设计师和插画家们传授课程，以帮助他人迈入这个领域。作为一名自由职业者时，她曾经服务过的客户有：GitHub，Giphy，Adobe和白宫。</span>
+                            <i class="fa  fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="contentpanel">
+                        <img src="img/discoverbox/s-02.jpeg" />
+                        <div>
+                            <span>Braden Kowitz</span>
+                            <span>简介</span>
+                            <span>Braden 是从在贝克曼研究所设计虚拟现实模拟器开始他的职业生涯的。从那时起，他就开始了传奇的履历，他主导设计了很多谷歌的旗舰产品，包括Gmail、谷歌商业应用系列app,谷歌趋势。他现在在Google Ventures组建了设计团队为初创公司解决各种设计难题。</span>
+                            <i class="fa  fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="contentpanel">
+                        <img src="img/discoverbox/s-03.jpeg" />
+                        <div>
+                            <span>Dan Becker</span>
+                            <span>简介</span>
+                            <span>Strava的设计总监，Dan带领跨职能的团队专注于社交健身的未来。在过去的十年里，他帮助Airbnb, Square, Apple, 和 Tesla 塑造产品和品牌体验。他是众多设计奖项的获得者，并且担任海湾地区的很多公司的设计顾问。</span>
+                            <i class="fa  fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-content">
+                <div class="wrapboxs">
+                    <p class="left">以分类浏览</p>
+                    <p class="right textend textbtn">所有分类>></p>
+                    <div class="clear"></div>
+                    <hr />
+                    <p class="left textbtn">UI/UX</p>
+                    <p class="left textbtn">工业设计</p>
+                    <p class="left textbtn">儿童</p>
+                    <p class="left textbtn">动漫</p>
+                    <p class="left textbtn">生活百科</p>
+                    <div class="clear"></div>
+                    <p class="left textbtn">平面</p>
+                    <p class="left textbtn">摄影</p>
+                    <p class="left textbtn">宠物</p>
+                    <p class="left textbtn">建筑设计</p>
+                    <p class="left textbtn">教育</p>
+                    <div class="clear"></div>
+                    <p class="left textbtn">插画/漫画</p>
+                    <p class="left textbtn">造型/美妆</p>
+                    <p class="left textbtn">美图</p>
+                    <p class="left textbtn">人文艺术</p>
+                    <p class="left textbtn">运动</p>
+                    <div class="clear"></div>
+                    <p class="left textbtn">家居/家装</p>
+                    <p class="left textbtn">美食</p>
+                    <p class="left textbtn">明星</p>
+                    <p class="left textbtn">数据图</p>
+                    <p class="left textbtn">搞笑</p>
+                    <div class="clear"></div>
+                    <p class="left textbtn">女装/搭配</p>
+                    <p class="left textbtn">旅行</p>
+                    <p class="left textbtn">美女</p>
+                    <p class="left textbtn">游戏</p>
+                    <div class="clear"></div>
+                    <p class="left textbtn">男士/风尚</p>
+                    <p class="left textbtn">手工/布艺</p>
+                    <p class="left textbtn">礼物</p>
+                    <p class="left textbtn">汽车/摩托</p>
+                    <div class="clear"></div>
+                    <p class="left textbtn">婚礼</p>
+                    <p class="left textbtn">健身/舞蹈</p>
+                    <p class="left textbtn">极客</p>
+                    <p class="left textbtn">电影/图书</p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="footerA">
+                <a>移动客户端</a>
+                <a>关于我们</a>
+                <a>加入艺云</a>
+                <a>用户协议</a>
+                <a>企业服务</a>
+                <a>帮助中心</a>
+                <a>联系我们</a>
+                <a>中文</a>
+                <a>English</a>
+                <div class="clearLeftFloat"></div>
+            </div>
+            <div class="footerhr"></div>
+            <div class="footerB">
+                <a>© YIYUN 福州技术网络有限公司</a>
+                <a>浙公网安备 33010602001878号</a>
+            </div>
+        </footer>
+    </body>
+
+</html>
